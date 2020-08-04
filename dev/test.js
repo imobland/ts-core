@@ -19,7 +19,7 @@ async function runAsync() {
 
   const mappedData = PropertyMap.map(data);
 
-  var property = await Property.findOne({ where: { property_id: 58688 } });
+  var property = await Property.findOne({ where: { property_id: 55607 } });
 
   if (property) {
     Object.assign(property, mappedData);

@@ -86,7 +86,7 @@
         words.push(attr.label);
       }
     });
-    return words.map(tag => _lodash.default.kebabCase(tag).split("-").join(" ")).map(tag => tag.match(/^\d/) ? "_" + tag : tag).join(" ");
+    return words.map(tag => _lodash.default.kebabCase(tag).split("-").join(" ")).join(" ").split(" ").map(tag => tag.match(/^\d/) ? "_" + tag : tag).join(" ");
   }
 
   var _default = {

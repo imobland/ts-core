@@ -66,6 +66,8 @@ function getWords(data) {
 
   return words
     .map((tag) => _.kebabCase(tag).split("-").join(" "))
+    .join(" ")
+    .split(" ")
     .map((tag) => (tag.match(/^\d/) ? "_" + tag : tag))
     .join(" ");
 }
