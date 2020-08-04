@@ -1,0 +1,442 @@
+{
+  "_doctype": "resource/data",
+  "_extends": "imobland/property",
+  "data": {
+    "property_id": 58688,
+    "realestate_id": 1,
+    "reference": "Gegege",
+    "title": "Mansão mal assombrada do GEGEGE no Kitarou",
+    "price": 200000,
+    "type": {
+      "id": 1,
+      "name": "Casa",
+      "category_id": "home"
+    },
+    "realestate": {
+      "id": 1,
+      "name": "Dev site 1",
+      "nickname": "devsite1"
+    },
+    "location": {
+      "street": "Rua Professor Coelho E Souza - 346",
+      "number": "234",
+      "postalcode": "84052000",
+      "complement": "",
+      "position": {
+        "lat": -25.10056,
+        "lon": -50.200012
+      },
+      "state": {
+        "id": 18,
+        "name": "Paraná",
+        "acronym": "PR"
+      },
+      "city": {
+        "id": 2,
+        "name": "Ponta Grossa"
+      },
+      "district": {
+        "id": 14,
+        "name": "Cará-Cará"
+      }
+    },
+    "integrations": [],
+    "display_thumb": "",
+    "display_url": "",
+    "picture_path": "",
+    "pictures": [
+      {
+        "picture_id": "735b5f0ef1f8b20eed796bfe4b855556",
+        "display": 0,
+        "src": null,
+        "path": "p8EMQEJk/aVNJRzV9/4664a4c9-c970-4839-867c-fcc3c11463fc.jpg",
+        "fullpath": "https://pictureimobland.blob.core.windows.net/gallery/p8EMQEJk/aVNJRzV9/4664a4c9-c970-4839-867c-fcc3c11463fc.jpg"
+      },
+      {
+        "picture_id": "bbbe87f5f3e4c27212a8d3027989c991",
+        "display": 0,
+        "src": null,
+        "path": "p8EMQEJk/aVNJRzV9/c16b3757-a2a7-48c6-912e-4c7165d73059.jpg",
+        "fullpath": "https://pictureimobland.blob.core.windows.net/gallery/p8EMQEJk/aVNJRzV9/c16b3757-a2a7-48c6-912e-4c7165d73059.jpg"
+      },
+      {
+        "picture_id": "e5ac79ddece2dc4e05fd7c62fbfc0289",
+        "display": 0,
+        "src": null,
+        "path": "p8EMQEJk/aVNJRzV9/4f8f0a26-a4eb-4ca3-ae7c-59bc82dd0822.jpg",
+        "fullpath": "https://pictureimobland.blob.core.windows.net/gallery/p8EMQEJk/aVNJRzV9/4f8f0a26-a4eb-4ca3-ae7c-59bc82dd0822.jpg"
+      },
+      {
+        "picture_id": "2a5fd702e4c43a63b434de2b22a5ced5",
+        "display": 0,
+        "src": null,
+        "path": "p8EMQEJk/aVNJRzV9/ee2d86db-9027-41b0-871c-221399b1ddce.jpg",
+        "fullpath": "https://pictureimobland.blob.core.windows.net/gallery/p8EMQEJk/aVNJRzV9/ee2d86db-9027-41b0-871c-221399b1ddce.jpg"
+      }
+    ],
+    "tags": [
+      "home",
+      "house",
+      "sale",
+      "residential",
+      "sea-distance",
+      "bath",
+      "garage",
+      "funded",
+      "accepts-exchange",
+      "maximum-people",
+      "property-tax",
+      "secure-tax",
+      "endorsed",
+      "paint-oil"
+    ],
+    "attr_data": {
+      "maximum-people": "23",
+      "garage": "3",
+      "bath": "2",
+      "bed": "3"
+    },
+    "user_id": 1,
+    "description": "Lorem ipsun Dolor Lorem ipsun Dolor Lorem ipsun Dolor Lorem ipsun Dolor Lorem ipsun Dolor Lorem ipsun Dolor Lorem ipsun Dolor Lorem ipsun Dolor Lorem ipsun Dolor Lorem ipsun Dolor Lorem ipsun Dolor ",
+    "date_created": "2020-08-03T04:39:22.000Z",
+    "last_modified": "2020-08-04T02:06:10.000Z",
+    "objective_id": 1,
+    "youtube_link": "",
+    "keywords": "",
+    "friendly_url": "58688-casa-a-venda",
+    "pictures_ready": true,
+    "location_embed": "",
+    "tour360_link": "",
+    "operation_id": "sale",
+    "attributes": [
+      {
+        "id": 15,
+        "name": "floor",
+        "type": "select",
+        "label": "Piso",
+        "value": "6",
+        "group": "feature"
+      },
+      {
+        "id": 129,
+        "name": "parking",
+        "type": "bool",
+        "label": "Estacionamento",
+        "value": "1",
+        "group": "improvement"
+      },
+      {
+        "id": 12,
+        "name": "property-status",
+        "type": "select",
+        "label": "Estado do imóvel",
+        "value": "6",
+        "group": "feature"
+      },
+      {
+        "id": 14,
+        "name": "ceiling",
+        "type": "select",
+        "label": "Forro",
+        "value": "4",
+        "group": "feature"
+      },
+      {
+        "id": 13,
+        "name": "material",
+        "type": "select",
+        "label": "Material",
+        "value": "6",
+        "group": "feature"
+      },
+      {
+        "id": 92,
+        "name": "furnished",
+        "type": "select",
+        "label": "Mobília",
+        "value": "1",
+        "group": "improvement"
+      },
+      {
+        "id": 91,
+        "name": "backyard",
+        "type": "bool",
+        "label": "Quintal",
+        "value": "1",
+        "group": "improvement"
+      },
+      {
+        "id": 75,
+        "name": "",
+        "type": "bool",
+        "label": "Gás encanado",
+        "value": "1",
+        "group": "improvement"
+      },
+      {
+        "id": 35,
+        "name": "telephone-line",
+        "type": "bool",
+        "label": "Linha telefônica",
+        "value": "1",
+        "group": "improvement"
+      },
+      {
+        "id": 34,
+        "name": "restroom",
+        "type": "bool",
+        "label": "Lavabo",
+        "value": "1",
+        "group": "improvement"
+      },
+      {
+        "id": 33,
+        "name": "fireplace",
+        "type": "bool",
+        "label": "Lareira",
+        "value": "1",
+        "group": "improvement"
+      },
+      {
+        "id": 7,
+        "name": "air-conditioner",
+        "type": "bool",
+        "label": "Ar condicionado",
+        "value": "1",
+        "group": "improvement"
+      },
+      {
+        "id": 31,
+        "name": "thermal-pool",
+        "type": "bool",
+        "label": "Piscina térmica",
+        "value": "1",
+        "group": "improvement"
+      },
+      {
+        "id": 184,
+        "name": "sea-view",
+        "type": "bool",
+        "label": "Vista para o mar",
+        "value": "1",
+        "group": "rooms"
+      },
+      {
+        "id": 145,
+        "name": "individual-meters",
+        "type": "bool",
+        "label": "Medidores individuais",
+        "value": "1",
+        "group": "rooms"
+      },
+      {
+        "id": 144,
+        "name": "gourmet-space",
+        "type": "bool",
+        "label": "Espaço Gourmet",
+        "value": "1",
+        "group": "rooms"
+      },
+      {
+        "id": 93,
+        "name": "",
+        "type": "bool",
+        "label": "Ático",
+        "value": "1",
+        "group": "rooms"
+      },
+      {
+        "id": 25,
+        "name": "living-room",
+        "type": "bool",
+        "label": "Sala de estar",
+        "value": "1",
+        "group": "rooms"
+      },
+      {
+        "id": 23,
+        "name": "kitchen",
+        "type": "bool",
+        "label": "Cozinha",
+        "value": "1",
+        "group": "rooms"
+      },
+      {
+        "id": 21,
+        "name": "closet ",
+        "type": "bool",
+        "label": "Closet ",
+        "value": "1",
+        "group": "rooms"
+      },
+      {
+        "id": 3,
+        "name": "garage",
+        "type": "integer",
+        "label": "Vagas na garagem",
+        "value": "3",
+        "group": "rooms"
+      },
+      {
+        "id": 2,
+        "name": "bath",
+        "type": "integer",
+        "label": "Banheiro(s)",
+        "value": "2",
+        "group": "rooms"
+      },
+      {
+        "id": 1,
+        "name": "bed",
+        "type": "integer",
+        "label": "Quarto(s)",
+        "value": "3",
+        "group": "rooms"
+      },
+      {
+        "id": 17,
+        "name": "paint",
+        "type": "select",
+        "label": "Pintura",
+        "value": "2",
+        "group": "feature"
+      },
+      {
+        "id": 80,
+        "name": "total-area",
+        "type": "number",
+        "label": "Área total - m²",
+        "value": "23.433",
+        "group": "feature"
+      },
+      {
+        "id": 81,
+        "name": "constructed-area",
+        "type": "number",
+        "label": "Área construída - m²",
+        "value": "32.34",
+        "group": "feature"
+      },
+      {
+        "id": 130,
+        "name": "",
+        "type": "number",
+        "label": "Metragem",
+        "value": "23.43",
+        "group": "feature"
+      },
+      {
+        "id": 131,
+        "name": "util-area",
+        "type": "number",
+        "label": "Área útil - m²",
+        "value": "2342.34",
+        "group": "feature"
+      },
+      {
+        "id": 148,
+        "name": "private-area",
+        "type": "number",
+        "label": "Área privativa - m²",
+        "value": "2.34",
+        "group": "feature"
+      },
+      {
+        "id": 181,
+        "name": "year-built",
+        "type": "integer",
+        "label": "Ano da construção",
+        "value": "2343",
+        "group": "feature"
+      },
+      {
+        "id": 57,
+        "name": "averbado",
+        "type": "bool",
+        "label": "Averbado",
+        "value": "1",
+        "group": "legal"
+      },
+      {
+        "id": 60,
+        "name": "funded",
+        "type": "bool",
+        "label": "Financiamento",
+        "value": "1",
+        "group": "legal"
+      },
+      {
+        "id": 88,
+        "name": "condominium-price",
+        "type": "number",
+        "label": "Valor condomínio",
+        "value": "23.43",
+        "group": "legal"
+      },
+      {
+        "id": 101,
+        "name": "accepts-exchange",
+        "type": "bool",
+        "label": "Aceita permuta",
+        "value": "1",
+        "group": "legal"
+      },
+      {
+        "id": 102,
+        "name": "reserved",
+        "type": "bool",
+        "label": "Reservado",
+        "value": "1",
+        "group": "legal"
+      },
+      {
+        "id": 103,
+        "name": "maximum-people",
+        "type": "integer",
+        "label": "Numero de pessoas",
+        "value": "23",
+        "group": "legal"
+      },
+      {
+        "id": 105,
+        "name": "property-tax",
+        "type": "number",
+        "label": "IPTU",
+        "value": "2342.43",
+        "group": "legal"
+      },
+      {
+        "id": 108,
+        "name": "delivery-date",
+        "type": "date",
+        "label": "Data de entrega",
+        "value": "234234",
+        "group": "legal"
+      },
+      {
+        "id": 133,
+        "name": "secure-tax",
+        "type": "number",
+        "label": "Seguro",
+        "value": "2342.34",
+        "group": "legal"
+      },
+      {
+        "id": 139,
+        "name": "real-estate-incorpor",
+        "type": "date",
+        "label": "Incorporação Imobiliária",
+        "value": "234234",
+        "group": "legal"
+      },
+      {
+        "id": 104,
+        "name": "sea-distance",
+        "type": "number",
+        "label": "Distância do mar (Metros)",
+        "value": "213.42",
+        "group": "location"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "ts-core",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d dist",
+    "git:push": "babel src -d dist && git add . && git commit -m \"add build\" && git push",
+    "test": "nodemon --exec babel-node dev",
+    "dev": "babel src -d dist && babel-node dev"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/plugin-transform-modules-umd": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.19",
+    "mysql2": "^2.1.0",
+    "node-cache": "^5.1.2",
+    "sequelize": "^5.21.11"
+  }
+}
