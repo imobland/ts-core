@@ -101,8 +101,12 @@
       data.title = property.title;
       data.reference = property.reference;
       data.price = property.price;
-      data.type_id = property.type.id;
-      data.type_name = property.type.name;
+
+      if (property.type) {
+        data.type_id = property.type.id;
+        data.type_name = property.type.name;
+      }
+
       var op = property.operation_id;
       data.operation_id = op == "sale" ? 1 : op == "rent" ? 2 : op == "season" ? 3 : 0;
 
@@ -113,15 +117,31 @@
 
       data.objective_id = property.objective_id;
       data.description = parseTags(property.description);
-      data.state_id = property.location.state.id;
-      data.state_name = property.location.state.name;
-      data.state_acronym = property.location.state.acronym;
-      data.city_id = property.location.city.id;
-      data.city_name = property.location.city.name;
-      data.district_id = property.location.district.id;
-      data.district_name = property.location.district.name;
-      data.lat = property.location.position.lat;
-      data.lon = property.location.position.lon;
+      const location = property.location;
+
+      if (location) {
+        if (location.state) {
+          data.state_id = location.state.id;
+          data.state_name = location.state.name;
+          data.state_acronym = location.state.acronym;
+        }
+
+        if (location.city) {
+          data.city_id = location.city.id;
+          data.city_name = location.city.name;
+        }
+
+        if (location.district) {
+          data.district_id = location.district.id;
+          data.district_name = location.district.name;
+        }
+
+        if (location.position) {
+          data.lat = location.position.lat;
+          data.lon = location.position.lon;
+        }
+      }
+
       data.date_created = property.insert_date;
       data.keywords = parseTags(property.keywords);
       data.tags = property.tags.map(tag => _lodash.default.kebabCase(tag)).map(tag => tag.match(/^\d/) ? "_" + tag : tag).join(" ");
