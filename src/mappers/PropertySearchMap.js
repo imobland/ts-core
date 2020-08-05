@@ -54,9 +54,7 @@ function getWords(data) {
       break;
   }
 
-  const location = data.location;
-
-  nestedValues(location).map((tag) => words.push(tag));
+  nestedValues(data.location).map((tag) => words.push(tag));
 
   data.attributes.map((attr) => {
     if (attr.label) {
@@ -64,10 +62,20 @@ function getWords(data) {
     }
   });
 
-  return words
-    .map((tag) => _.kebabCase(tag).split("-").join(" "))
-    .join(" ")
-    .split(" ")
+  // ---------------------------------------------------------------------------
+
+  let keys = [];
+
+  words.map((tag) =>
+    tag
+      .toString()
+      .split(" ")
+      .map((key) => {
+        key && keys.push(_.kebabCase(key).replace(/\-/, ""));
+      })
+  );
+
+  return _.sortedUniq(keys)
     .map((tag) => (tag.match(/^\d/) ? "_" + tag : tag))
     .join(" ");
 }

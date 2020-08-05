@@ -19,18 +19,18 @@ async function runAsync() {
 
   const mappedData = PropertyMap.map(data);
 
-  var property = await Property.findOne({ where: { property_id: 55607 } });
+  // var property = await Property.findOne({ where: { property_id: 58702 } });
+  // if (property) {
+  //   Object.assign(property, mappedData);
+  //   await property.save();
+  // } else {
+  //   property = await Property.create(mappedData);
+  // }
 
-  if (property) {
-    Object.assign(property, mappedData);
-    await property.save();
-  } else {
-    property = await Property.create(mappedData);
-  }
+  var searchData = PropertySearchMap.map(mappedData);
 
-  var searchData = PropertySearchMap.map(property);
-
-  await PropertySearch.upsert(searchData);
+  console.log(searchData);
+  // await PropertySearch.upsert(searchData);
 
   conn.close();
 }

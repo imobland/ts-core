@@ -79,14 +79,18 @@
         break;
     }
 
-    const location = data.location;
-    nestedValues(location).map(tag => words.push(tag));
+    nestedValues(data.location).map(tag => words.push(tag));
     data.attributes.map(attr => {
       if (attr.label) {
         words.push(attr.label);
       }
-    });
-    return words.map(tag => _lodash.default.kebabCase(tag).split("-").join(" ")).join(" ").split(" ").map(tag => tag.match(/^\d/) ? "_" + tag : tag).join(" ");
+    }); // ---------------------------------------------------------------------------
+
+    let keys = [];
+    words.map(tag => tag.toString().split(" ").map(key => {
+      key && keys.push(_lodash.default.kebabCase(key).replace(/\-/, ""));
+    }));
+    return _lodash.default.sortedUniq(keys).map(tag => tag.match(/^\d/) ? "_" + tag : tag).join(" ");
   }
 
   var _default = {
