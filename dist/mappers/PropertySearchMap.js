@@ -46,6 +46,8 @@
     let words = [];
 
     if (data.reference) {
+      _lodash.default.kebabCase(data.reference).split("-").map(key => words.push(key));
+
       words.push(data.reference);
     }
 

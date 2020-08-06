@@ -28,6 +28,8 @@ function getWords(data) {
   let words = [];
 
   if (data.reference) {
+    _.kebabCase(data.reference)
+      .split("-").map(key => words.push(key))
     words.push(data.reference);
   }
   if (data.type) {
