@@ -31,11 +31,11 @@
     const rows = [];
 
     const run = data => {
-      Object.values(data).map(row => {
+      data && Object.values(data).map(row => {
         if (typeof row == "object") {
           run(row);
         } else {
-          rows.push(row);
+          row && rows.push(row);
         }
       });
     };
