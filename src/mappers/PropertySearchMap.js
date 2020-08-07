@@ -1,12 +1,14 @@
 import _ from "lodash";
 
 function parseTags(str) {
-  return str
-    .replace(/\s+/g, " ")
-    .split(" ")
-    .map((tag) => _.kebabCase(tag))
-    .map((tag) => (tag.match(/^\d/) ? "_" + tag : tag))
-    .join(" ");
+  if (str) {
+    return str
+      .replace(/\s+/g, " ")
+      .split(" ")
+      .map((tag) => _.kebabCase(tag))
+      .map((tag) => (tag.match(/^\d/) ? "_" + tag : tag))
+      .join(" ");
+  }
 }
 
 function nestedValues(data) {
@@ -29,7 +31,8 @@ function getWords(data) {
 
   if (data.reference) {
     _.kebabCase(data.reference)
-      .split("-").map(key => words.push(key))
+      .split("-")
+      .map((key) => words.push(key));
     words.push(data.reference);
   }
   if (data.type) {

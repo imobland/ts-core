@@ -22,7 +22,9 @@
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function parseTags(str) {
-    return str.replace(/\s+/g, " ").split(" ").map(tag => _lodash.default.kebabCase(tag)).map(tag => tag.match(/^\d/) ? "_" + tag : tag).join(" ");
+    if (str) {
+      return str.replace(/\s+/g, " ").split(" ").map(tag => _lodash.default.kebabCase(tag)).map(tag => tag.match(/^\d/) ? "_" + tag : tag).join(" ");
+    }
   }
 
   function nestedValues(data) {
