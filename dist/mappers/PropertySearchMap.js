@@ -40,7 +40,7 @@
       });
     };
 
-    run(data);
+    data && run(data);
     return rows;
   }
 

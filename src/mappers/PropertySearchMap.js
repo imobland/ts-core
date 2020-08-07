@@ -22,7 +22,7 @@ function nestedValues(data) {
       }
     });
   };
-  run(data);
+  data && run(data);
   return rows;
 }
 
