@@ -62,19 +62,20 @@ function getWords(data) {
       break;
   }
 
-  data.location && nestedValues(data.location).map((tag) => words.push(tag));
+  // data.location && nestedValues(data.location).map((tag) => words.push(tag));
 
-  data.attributes.map((attr) => {
-    if (attr.label) {
-      words.push(attr.label);
-    }
-  });
+  // data.attributes.map((attr) => {
+  //   if (attr.label) {
+  //     words.push(attr.label);
+  //   }
+  // });
 
   // ---------------------------------------------------------------------------
 
   let keys = [];
 
   words.map((tag) =>
+    tag &&
     tag
       .toString()
       .split(" ")
