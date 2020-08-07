@@ -22,7 +22,6 @@ export default {
       price: data.price,
 
       description: data.description,
-      // display_url: ,
       date_created: data.date_created,
       last_modified: data.last_modified,
       title: data.title,
@@ -37,6 +36,7 @@ export default {
 
       pictures_ready: data.pictures_ready,
       picture_path: getPictureDisplay(data),
+      display_url: data.display_url,
       location_embed: data.location_embed,
       tour360_link: data.tour360_link,
       friendly_url: data.friendly_url,
