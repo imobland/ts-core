@@ -14,15 +14,18 @@ function parseTags(str) {
 function nestedValues(data) {
   const rows = [];
   const run = (data) => {
-    data && Object.values(data).map((row) => {
-      if (typeof row == "object") {
-        run(row);
-      } else {
-        row && rows.push(row);
-      }
-    });
+    data &&
+      Object.values(data).map((row) => {
+        if (typeof row == "object") {
+          run(row);
+        } else {
+          row && rows.push(row);
+        }
+      });
   };
-  data && run(data);
+  if (typeof row == "object") {
+    run(data);
+  }
   return rows;
 }
 

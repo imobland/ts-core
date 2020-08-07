@@ -40,7 +40,10 @@
       });
     };
 
-    data && run(data);
+    if (typeof row == "object") {
+      run(data);
+    }
+
     return rows;
   }
 
