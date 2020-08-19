@@ -22,7 +22,7 @@
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function parseTags(str) {
-    if (str) {
+    if (str && typeof str == "string") {
       return str.replace(/\s+/g, " ").split(" ").map(tag => _lodash.default.kebabCase(tag)).map(tag => tag.match(/^\d/) ? "_" + tag : tag).join(" ");
     }
   }

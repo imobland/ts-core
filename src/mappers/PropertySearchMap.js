@@ -1,7 +1,7 @@
 import _ from "lodash";
 
 function parseTags(str) {
-  if (str) {
+  if (str && typeof str == "string") {
     return str
       .replace(/\s+/g, " ")
       .split(" ")
