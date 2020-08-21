@@ -40,7 +40,7 @@
       });
     };
 
-    if (typeof row == "object") {
+    if (typeof data == "object") {
       run(data);
     }
 
@@ -84,14 +84,14 @@
       case "season":
         words.push("veraneio", "temporada", "season");
         break;
-    } // data.location && nestedValues(data.location).map((tag) => words.push(tag));
-    // data.attributes.map((attr) => {
-    //   if (attr.label) {
-    //     words.push(attr.label);
-    //   }
-    // });
-    // ---------------------------------------------------------------------------
+    }
 
+    data.location && nestedValues(data.location).map(tag => words.push(tag));
+    data.attributes.map(attr => {
+      if (attr.label) {
+        words.push(attr.label);
+      }
+    }); // ---------------------------------------------------------------------------
 
     let keys = [];
     words.map(tag => tag && tag.toString().split(" ").map(key => {

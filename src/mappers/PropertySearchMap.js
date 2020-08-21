@@ -23,7 +23,7 @@ function nestedValues(data) {
         }
       });
   };
-  if (typeof row == "object") {
+  if (typeof data == "object") {
     run(data);
   }
   return rows;
@@ -62,13 +62,13 @@ function getWords(data) {
       break;
   }
 
-  // data.location && nestedValues(data.location).map((tag) => words.push(tag));
+  data.location && nestedValues(data.location).map((tag) => words.push(tag));
 
-  // data.attributes.map((attr) => {
-  //   if (attr.label) {
-  //     words.push(attr.label);
-  //   }
-  // });
+  data.attributes.map((attr) => {
+    if (attr.label) {
+      words.push(attr.label);
+    }
+  });
 
   // ---------------------------------------------------------------------------
 
