@@ -65,23 +65,25 @@ function getWords(data) {
   data.location && nestedValues(data.location).map((tag) => words.push(tag));
 
   data.attributes.map((attr) => {
-    if (attr.label) {
+    if (attr && attr.label) {
       words.push(attr.label);
     }
   });
 
+  console.log(data.attributes);
   // ---------------------------------------------------------------------------
 
   let keys = [];
 
-  words.map((tag) =>
-    tag &&
-    tag
-      .toString()
-      .split(" ")
-      .map((key) => {
-        key && keys.push(_.kebabCase(key).replace(/\-/, ""));
-      })
+  words.map(
+    (tag) =>
+      tag &&
+      tag
+        .toString()
+        .split(" ")
+        .map((key) => {
+          key && keys.push(_.kebabCase(key).replace(/\-/, ""));
+        })
   );
 
   return _.sortedUniq(keys)
@@ -156,10 +158,15 @@ export default {
 
     data.words = getWords(property);
 
-    if (property.attr_data) {
-      data.bedrooms = property.attr_data.bed;
-      data.bathrooms = property.attr_data.bath;
-      data.garage = property.attr_data.garage;
+    // -------------------------------------------------------------------------
+
+    const primaries = { bed: "bedrooms", bath: "bathrooms", garage: "garage" };
+    
+    for (const i in property.attributes) {
+      const row = property.attributes[i];
+      if (row && primaries.hasOwnProperty(row.name)) {
+        data[primaries[row.name]] = row.value;
+      }
     }
 
     return data;

@@ -88,10 +88,11 @@
 
     data.location && nestedValues(data.location).map(tag => words.push(tag));
     data.attributes.map(attr => {
-      if (attr.label) {
+      if (attr && attr.label) {
         words.push(attr.label);
       }
-    }); // ---------------------------------------------------------------------------
+    });
+    console.log(data.attributes); // ---------------------------------------------------------------------------
 
     let keys = [];
     words.map(tag => tag && tag.toString().split(" ").map(key => {
@@ -156,12 +157,20 @@
       data.date_created = property.insert_date;
       data.keywords = parseTags(property.keywords);
       data.tags = property.tags.map(tag => _lodash.default.kebabCase(tag)).map(tag => tag.match(/^\d/) ? "_" + tag : tag).join(" ");
-      data.words = getWords(property);
+      data.words = getWords(property); // -------------------------------------------------------------------------
 
-      if (property.attr_data) {
-        data.bedrooms = property.attr_data.bed;
-        data.bathrooms = property.attr_data.bath;
-        data.garage = property.attr_data.garage;
+      const primaries = {
+        bed: "bedrooms",
+        bath: "bathrooms",
+        garage: "garage"
+      };
+
+      for (const i in property.attributes) {
+        const row = property.attributes[i];
+
+        if (row && primaries.hasOwnProperty(row.name)) {
+          data[primaries[row.name]] = row.value;
+        }
       }
 
       return data;
