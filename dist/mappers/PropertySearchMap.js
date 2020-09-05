@@ -154,7 +154,7 @@
         }
       }
 
-      data.date_created = property.insert_date;
+      data.date_created = property.date_created;
       data.keywords = parseTags(property.keywords);
       data.tags = property.tags.map(tag => _lodash.default.kebabCase(tag)).map(tag => tag.match(/^\d/) ? "_" + tag : tag).join(" ");
       data.words = getWords(property); // -------------------------------------------------------------------------
