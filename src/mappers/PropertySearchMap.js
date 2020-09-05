@@ -147,7 +147,7 @@ export default {
       }
     }
 
-    data.date_created = property.insert_date;
+    data.date_created = property.date_created;
 
     data.keywords = parseTags(property.keywords);
 

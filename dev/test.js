@@ -21,7 +21,8 @@ async function syncPropertySearch(property_id) {
 
   if (!property) return;
 
-  // console.log(property.attr_data);
+  console.log(property.tags);
+  return;
   // console.log(property.attributes);
 
   var searchData = PropertySearchMap.map(property);
