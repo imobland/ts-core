@@ -2,7 +2,7 @@ import Sequelize from "sequelize";
 import dbConfig from "../config/database";
 
 import Property from "../models/Property";
-// import Realestate from "../models/Realestate";
+import Realestate from "../models/Realestate";
 import PropertySearch from "../models/PropertySearch";
 
 var sequelize;
@@ -15,11 +15,11 @@ const connect = (config = {}) => {
 
   const models = config.models ? config.models : {};
 
-  // Realestate.init(sequelize, models.Realestate);
+  Realestate.init(sequelize, models.Realestate);
   Property.init(sequelize, models.Property);
   PropertySearch.init(sequelize, models.PropertySearch);
 
-  // Realestate.associate(sequelize.models);
+  Realestate.associate(sequelize.models);
   Property.associate(sequelize.models);
   PropertySearch.associate(sequelize.models);
 

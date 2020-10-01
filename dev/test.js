@@ -2,7 +2,7 @@ require("dotenv/config");
 
 // import { Models, Mappers, DB } from "../dist";
 import { Models, Mappers, DB } from "../src";
-const { Property, PropertySearch } = Models;
+const { Property, PropertySearch, Realestate } = Models;
 const { PropertyMap, PropertySearchMap } = Mappers;
 
 global.connection = DB.connect({
@@ -34,9 +34,7 @@ async function syncPropertySearch(property_id) {
   // conn.close();
 }
 
-const properties = [
-  59871
-];
+const properties = [59871];
 
 const { promisify } = require("util");
 const writeFile = promisify(require("fs").writeFile);

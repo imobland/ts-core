@@ -1,4 +1,5 @@
 import Property from "./Property";
 import PropertySearch from "./PropertySearch";
+import Realestate from "./Realestate";
 
-export { Property, PropertySearch };
+export { Property, PropertySearch, Realestate };
