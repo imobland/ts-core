@@ -45,7 +45,9 @@
         ssl: _sequelize.default.NUMBER,
         friendly_url: _sequelize.default.STRING,
         date_created: _sequelize.default.DATE,
-        last_modified: _sequelize.default.DATE
+        last_modified: _sequelize.default.DATE,
+        lunasky: _sequelize.default.NUMBER,
+        disabled: _sequelize.default.NUMBER
       };
       super.init(fields, {
         tableName: "realestate",
