@@ -23,6 +23,9 @@ class Realestate extends Model {
       friendly_url: Sequelize.STRING,
       date_created: Sequelize.DATE,
       last_modified: Sequelize.DATE,
+
+      lunasky: Sequelize.NUMBER,
+      disabled: Sequelize.NUMBER,
     };
 
     super.init(fields, {
