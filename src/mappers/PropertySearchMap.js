@@ -145,6 +145,9 @@ export default {
         data.lat = location.position.lat;
         data.lon = location.position.lon;
       }
+      if (location.street) {
+        data.street = location.street;
+      }
     }
 
     data.date_created = property.date_created;
@@ -161,7 +164,7 @@ export default {
     // -------------------------------------------------------------------------
 
     const primaries = { bed: "bedrooms", bath: "bathrooms", garage: "garage" };
-    
+
     for (const i in property.attributes) {
       const row = property.attributes[i];
       if (row && primaries.hasOwnProperty(row.name)) {

@@ -21,20 +21,18 @@ async function syncPropertySearch(property_id) {
 
   if (!property) return;
 
-  console.log(property.tags);
-  return;
   // console.log(property.attributes);
 
   var searchData = PropertySearchMap.map(property);
 
   console.log(searchData);
-  return;
+  // return;
   await PropertySearch.upsert(searchData);
 
   // conn.close();
 }
 
-const properties = [59871];
+const properties = [60237];
 
 const { promisify } = require("util");
 const writeFile = promisify(require("fs").writeFile);
